@@ -28,6 +28,7 @@ function playIntro() {
 $(document).ready(function() {
   playMainMusic();
   playIntro();
+  
   $(".ryu").mouseenter(function() {
     $(".ryu-still").hide();
     $(".ryu-ready").show();
@@ -65,10 +66,10 @@ $(document).keydown(function(e) {
 })
   .keyup(function(e) {
     if (e.which == 88) {
-      $(".ryu-cool").hide();
-      $(".ryu-ready").show();
       $("#cool-pose-sound")[0].pause();
       $("#cool-pose-sound")[0].load();
       $("#main-sound")[0].play();
+      $(".ryu-cool").hide();
+      $(".ryu-ready").show();
     }
 });
